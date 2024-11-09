@@ -6,9 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '3000'
+        protocol: 'https',
+        hostname: 'xmh-997k5le83-vmarinhodevs-projects.vercel.app/',
       }
     ]
   }
