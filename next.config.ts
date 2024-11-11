@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'xmh-tawny.vercel.app',
-        // port: '3000'
       }
     ]
   }
