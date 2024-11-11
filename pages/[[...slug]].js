@@ -36,5 +36,6 @@ export async function getStaticProps(ctx) {
         props: {
             page: pageData,
         },
+        revalidate: 60,
     };
 };
