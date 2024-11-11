@@ -13,8 +13,6 @@ export default function Page({ page }) {
 export const getStaticPaths = (async () => {
     const pageReq = await axios(`/api/pages?limit=100`);
     const pageData = pageReq.data;
-    console.log('pageData', pageData)
-
     const returnObj = {
         paths: pageData.docs.map(({ slug }) => {
            
@@ -36,6 +34,5 @@ export async function getStaticProps(ctx) {
         props: {
             page: pageData,
         },
-        revalidate: 60,
     };
 };
