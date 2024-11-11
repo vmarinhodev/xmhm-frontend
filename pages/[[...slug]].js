@@ -16,6 +16,7 @@ export const getStaticPaths = (async () => {
 
     const returnObj = {
         paths: pageData.docs.map(({ slug }) => {
+           
             return {
                 params: { slug: slug !== 'index' ? slug.split('/') : false },
             };

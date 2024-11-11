@@ -25,11 +25,11 @@ export default function TwoColumn({ heading, text, image, direction }: TwoColumn
             {/* Image Section */}
             <div className="w-full md:w-1/2 h-full max-h-[350px] overflow-hidden flex-shrink-0">
                 <Image
+                    className="object-cover object-center w-full h-full"
                     src={image.url}
                     height={image.height}
                     width={image.width}
                     alt={image.alt}
-                    className="object-cover object-center w-full h-full"
                 />
             </div>
 
