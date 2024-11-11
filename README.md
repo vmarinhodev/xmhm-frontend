@@ -3,7 +3,7 @@
 ## Getting Started
 ## Great Idea
 
-First, run the development server:
+First, run the development server: quick
 
 ```bash
 npm run dev
