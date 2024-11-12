@@ -6,9 +6,9 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
-        // hostname: 'xmh-tawny.vercel.app',
+        protocol: 'https',
+        // hostname: 'localhost',
+        hostname: 'xmh-tawny.vercel.app',
       }
     ]
   }
