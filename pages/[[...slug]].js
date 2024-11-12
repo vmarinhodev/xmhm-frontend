@@ -27,12 +27,23 @@ export const getStaticPaths = (async () => {
 
 export async function getStaticProps(ctx) {
     const slug = ctx.params?.slug || 'index';
+    console.log("Fetching data for slug:", slug);
     //Fetch Page
-    const pageReq = await axios(`/api/pages?where[slug][equals]=${slug}`);
-    let pageData = pageReq.data.docs[0];
-    return {
-        props: {
-            page: pageData,
-        },
-    };
+    try {
+        const pageReq = await axios(`/api/pages?where[slug][equals]=${slug}`);
+        let pageData = pageReq.data.docs[0];
+        console.log("Fetched page data:", pageData);
+        return {
+            props: {
+                page: pageData,
+            },
+            revalidate: 1,
+        };
+    } catch (error) {
+        console.error("Error in getStaticProps:", error);
+        return {
+            notFound: true,
+        };
+    }
+    
 };

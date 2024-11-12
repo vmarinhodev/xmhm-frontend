@@ -17,7 +17,7 @@ export interface HeroBlock {
 export default function Hero({ heading, text, backgroundImage}: HeroBlock) {
     return (
         <div className="relative overflow-hidden">
-            <div className="flex flex-col items-center justify-center w-full py-40 relative text-white z-10">
+            <div className="flex flex-col items-center justify-center w-full py-40 relative text-black z-10">
                 <h2 className="font-bold text-3xl mb-4">{heading}</h2>
                 <p className="text-lg">{text}</p>
             </div>

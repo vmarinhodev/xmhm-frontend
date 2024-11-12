@@ -8,6 +8,12 @@ axios.defaults.headers.post["Content-Type"] = "application/json";
 axios.defaults.headers.patch["Content-Type"] = "application/json";
 axios.defaults.withCredentials = true;
 
+
+
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    
+      <Component {...pageProps} />
+   
+  );
 }
